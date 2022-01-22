@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    */ font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    min-height: 100vh;
+    background: white;
+}
+
+footer {
+    position: relative;
+    width: 100%;
+    background-color: #3586ff;
+    min-height: 100px;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    animation: animateWave 3s linear infinite;
+}
+
+footer .icons,
+footer .menu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+ul {
+    list-style: none;
+}
+
+footer .icons li a {
+    font-size: 2em;
+    color: white;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+    animation: icon 4s linear 2s;
+}
+
+footer .menu li a {
+    font-size: 2em;
+    color: white;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+footer .icons li a:hover {
+    transform: translateY(-10px);
+}
+
+footer .menu li a {
+    font-size: 1.2em;
+    color: white;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+    text-decoration: none;
+    opacity: 0.75;
+}
+
+footer .menu li a:hover {
+    opacity: 1;
+}
+
+footer p {
+    font-size: 1.1em;
+    align-items: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+footer .wave {
+    position: absolute;
+    top: -100px;
+    left: 0px;
+    background: url(/wave.png);
+    width: 100%;
+    height: 100px;
+    background-size: 900px 100px;
+}
+
+footer .wave#wave1 {
+    z-index: 100;
+    opacity: 1;
+    bottom: 0;
+    animation: animateWave 4s linear infinite;
+}
+
+footer .wave#wave2 {
+    z-index: 999;
+    opacity: 0.2;
+    bottom: 10px;
+    animation: animateWave_2 4s linear infinite;
+}
+
+footer .wave#wave3 {
+    z-index: 1000;
+    opacity: 0.2;
+    bottom: 15px;
+    animation: animateWave 3s linear infinite;
+}
+
+footer .wave#wave4 {
+    z-index: 2000;
+    opacity: 0.8;
+    bottom: 30px;
+    animation: animateWave_2 3s linear infinite;
+}
+
+@keyframes icon {
+    0% {
+        transform: scale(none);
+    }
+    50% {
+        transform: scale(0.8, 0.8)
+    }
+    75% {
+        transform: scale(1.3, 1.3)
+    }
+    100% {
+        transform: scale(2em)
+    }
+}
+
+@keyframes animateWave {
+    0% {
+        background-position-x: 1000px;
+    }
+    100% {
+        background-position-x: 0px;
+    }
+}
+
+@keyframes animateWave_2 {
+    0% {
+        background-position-x: 0px;
+    }
+    100% {
+        background-position-x: 1000px;
+    }
+}
